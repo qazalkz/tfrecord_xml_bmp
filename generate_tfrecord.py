@@ -22,9 +22,12 @@ import pandas as pd
 import io
 import xml.etree.ElementTree as ET
 import argparse
-from tensorflow import tf.compat.v1.gfile.GFile, tf.compat.v1.gfile.Open, tf.compat.v1.io.gfile.GFile
+import tensorflow.compat.v1 as tf
+# import tf.compat.v1.gfile.GFile as tf
+# import tf.compat.v1.gfile.Open as tf
+import tf.compat.v1.io.gfile.GFile as tf
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'    # Suppress TensorFlow logging (1)
-import tensorflow as tf
+
 from PIL import Image
 from object_detection.utils import dataset_util, label_map_util
 from collections import namedtuple
