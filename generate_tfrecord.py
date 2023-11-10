@@ -26,7 +26,7 @@ import numpy as np
 import pandas as pd
 import scipy
 import tensorflow.compat.v2 as tf
-import import tensorflow.io
+import tensorflow.io
 tf.enable_v2_behavior()
 import tensorflow_probability as tfp
 tfd = tfp.distributions
