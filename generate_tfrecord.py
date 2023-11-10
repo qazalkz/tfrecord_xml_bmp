@@ -26,6 +26,7 @@ import numpy as np
 import pandas as pd
 import scipy
 import tensorflow.compat.v2 as tf
+import import tensorflow.io
 tf.enable_v2_behavior()
 import tensorflow_probability as tfp
 tfd = tfp.distributions
@@ -114,7 +115,7 @@ def split(df, group):
 
 
 def create_tf_example(group, path):
-    with tf.io.gfile.GFile(os.path.join(path, '{}'.format(group.filename)), 'rb') as fid:
+    with tensorflow.io.gfile.GFile(os.path.join(path, '{}'.format(group.filename)), 'rb') as fid:
         encoded_bmp = fid.read()
     encoded_bmp_io = io.BytesIO(encoded_bmp)
     image = Image.open(encoded_bmp_io)
