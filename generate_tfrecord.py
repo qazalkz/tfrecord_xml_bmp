@@ -22,10 +22,13 @@ import pandas as pd
 import io
 import xml.etree.ElementTree as ET
 import argparse
-import tensorflow.compat.v1 as tf
-# import tf.compat.v1.gfile.GFile as tf
-# import tf.compat.v1.gfile.Open as tf
-import tf.compat.v1.io.gfile.GFile as tf
+import numpy as np
+import pandas as pd
+import scipy
+import tensorflow.compat.v2 as tf
+tf.enable_v2_behavior()
+import tensorflow_probability as tfp
+tfd = tfp.distributions
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'    # Suppress TensorFlow logging (1)
 
 from PIL import Image
