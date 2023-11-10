@@ -25,11 +25,8 @@ import argparse
 import numpy as np
 import pandas as pd
 import scipy
-import tensorflow.compat.v2 as tf
-import tensorflow.io
-tf.enable_v2_behavior()
-import tensorflow_probability as tfp
-tfd = tfp.distributions
+import tensorflow as tf
+print(tf.__version__)
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'    # Suppress TensorFlow logging (1)
 
 from PIL import Image
